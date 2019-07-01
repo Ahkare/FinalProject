@@ -1,0 +1,647 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* Celeste Font //////////////////////////////////////////////////////////*/
+
+@font-face {
+    font-family: 'personified_uxregular';
+    src: url('../fonts/personifieduxregular-webfont.woff2') format('woff2'),
+         url('../fonts/personifieduxregular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    font-family: 'personified_uxregular';
+    background-color: #000000;
+}
+
+
+/*////////////////////////////////////////////////////////////////////////*/
+/* Nav Menu //////////////////////////////////////////////////////////////*/
+
+img {
+    margin: 0px;
+    padding: 0px;
+}
+
+#persona-logo {
+    height: 65px;
+    width: 85px;
+}
+
+#persona-menu-icon {
+    height: 60px;
+    width: 110px;
+}
+
+nav {
+    z-index: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('../ressources/Persona/header-bg.png');
+    background-size: 100vw 90px;
+    background-repeat: no-repeat;
+}
+
+
+.logoclic {
+    z-index: 100;
+    margin-left: 10%;
+}
+
+.celesteimg {
+    height: 55px;
+    width: 80px;
+}
+
+.zeldaimg {
+    height: 52px;
+    width: 90px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(29, 28, 28);
+}
+
+.burger {
+    display: none;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 33%;
+    }
+
+    .logoclic {
+        margin-left: 11%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 65vh;
+        top: 100px;
+        background-image: url('../ressources/Persona/nav.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        visibility: hidden;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.1s ease-in;
+    }
+
+    .celesteimg {
+        height: 90px;
+        width: 140px;
+    }
+
+    .zeldaimg {
+        height: 90px;
+        width: 140px;
+    }
+
+    .nav-links li {
+        opacity: 0;
+        height: 20%;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+        margin: 20px;
+    }
+}
+
+
+.nav-active {
+    visibility: visible;
+    transform: translateX(0%);
+}
+
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(150px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* Video Banner //////////////////////////////////////////////////////////*/
+
+.vid-header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #c1bfc2;
+    overflow: hidden;
+}
+
+.vid-container {
+    width: 100%;
+    height: 100%;
+}
+
+.dim-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #851e1e9c;
+    z-index: -490;
+}
+
+.vid-container video {
+    position: absolute;
+    z-index: -500;
+    min-height: 100%;
+    min-width: 100%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+.img-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+
+#persona-banner {
+    width: 470px;
+    height: 530px;
+    margin-bottom: 70px;
+}
+
+#persona-title {
+    position: absolute;
+    top: 350px;
+    width: 250px;
+    height: 150px;
+}
+
+@media screen and (max-width: 768px) {
+    #persona-banner {
+        width: 350px;
+        height: 365px;
+    }
+
+    #persona-title {
+        width: 100px;
+        height: 60px;
+        top: 270px;
+    }
+}
+
+/* Separation ////////////////////////////////////////////////*/
+
+#persona-separation {
+    z-index: -300;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+}
+
+.persona-name {
+    font-size: 18px;
+}
+
+/* Section 1 /////////////////////////////////////////////*/
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#part1 {
+    position: relative;
+    z-index: 0;
+}
+
+#sectionimg1 {
+    width: 100%;
+    z-index: 0;
+    animation: ease-in;
+    animation-delay: 1s;
+}
+
+#joker {
+    position: absolute;
+    z-index: -10;
+    top: -25%;
+    left: 40%;
+    width: 40%;
+}
+
+#secinfo1 {
+    position: absolute;
+    z-index: 10;
+    top: 25%;
+    left: 10%;
+    width: 70%;
+    height: 50%;
+}
+
+#sectext1 {
+    position: absolute;
+    z-index: 11;
+    top: 36%;
+    left: 30%;
+    color: white;
+    width: 35%;
+    height: 30%;;
+    font-size: 22px;
+    transform: rotate(3deg);
+}
+
+/* Section 2 /////////////////////////////////////*/
+
+#part2 {
+    position: relative;
+    z-index: 10;
+}
+
+#sectionimg2 {
+    width: 100%;
+    z-index: 10;
+    transform: scaleX(-1);
+}
+
+#noire {
+    position: absolute;
+    z-index: -10;
+    top: -15%;
+    left: 0%;
+    width: 30%;
+}
+
+#skull {
+    position: absolute;
+    z-index: -10;
+    top: -15%;
+    left: 20%;
+    width: 30%;
+}
+
+#morgana {
+    position: absolute;
+    z-index: -10;
+    top: -5%;
+    left: 60%;
+    width: 10%;
+}
+
+#panther {
+    position: absolute;
+    z-index: -10;
+    top: -17%;
+    right: 0%;
+    width: 30%;
+}
+
+#secinfo2 {
+    position: absolute;
+    z-index: 10;
+    top: 25%;
+    left: 10%;
+    width: 80%;
+    height: 50%;
+}
+
+#secdeco2 {
+    position: absolute;
+    z-index: 11;
+    top: 25%;
+    right: 0%;
+    width: 45%;
+    height: 35%;;
+}
+
+#sectext2 {
+    position: absolute;
+    z-index: 11;
+    top: 43%;
+    left: 25%;
+    color: white;
+    width: 35%;
+    height: 30%;;
+    font-size: 22px;
+    transform: rotate(1deg);
+}
+
+
+/* Section 3 /////////////////////////////////////*/
+
+#part3 {
+    position: relative;
+    z-index: 10;
+}
+
+#sectionimg3 {
+    width: 100%;
+    z-index: 10;
+}
+
+#futaba {
+    position: absolute;
+    z-index: -10;
+    top: -25%;
+    left: 0%;
+    width: 30%;
+}
+
+#yusuke {
+    position: absolute;
+    z-index: -10;
+    top: -22%;
+    left: 18%;
+    width: 30%;
+}
+
+#makoto {
+    position: absolute;
+    z-index: -10;
+    top: -22%;
+    left: 42%;
+    width: 30%;
+}
+
+#kasumi {
+    position: absolute;
+    z-index: -10;
+    top: -15%;
+    right: 0%;
+    width: 30%;
+}
+
+#secinfo3 {
+    position: absolute;
+    z-index: 10;
+    top: 25%;
+    left: 10%;
+    width: 60%;
+    height: 50%;
+}
+
+#secdeco3 {
+    position: absolute;
+    z-index: 11;
+    top: 45%;
+    right: 20%;
+    width: 25%;
+    height: 25%;;
+}
+
+#sectext3 {
+    position: absolute;
+    z-index: 11;
+    top: 37%;
+    left: 19%;
+    color: white;
+    width: 32%;
+    height: 30%;;
+    font-size: 22px;
+    transform: rotate(-1deg);
+}
+
+/*  CAROUSEL 
+.carousel-container {
+    position: absolute;
+    border: 5px solid red;
+    top: 48%;
+    left: 16.5%;
+    z-index: 50;
+    width: 36%;
+    height: 320px;
+    transform: rotate(-5deg);
+    overflow: hidden;
+}
+
+#prevBtn {
+    position: absolute;
+    top: 50%;
+    z-index: 60;
+    left: 10%;
+    color: rgb(255, 0, 0);
+    font-size: 40px;
+    cursor: pointer;
+}
+
+
+#nextBtn {
+    position: absolute;
+    top: 50%;
+    z-index: 100;
+    right: 10%;
+    color: rgb(255, 0, 0);
+    font-size: 40px;
+    cursor: pointer;
+
+}
+
+.carousel-slide {
+
+    display: flex;
+    width: 100%;
+    height: 320px;
+}
+.carousel-slide img {
+    
+    max-width: 100%;
+    max-height: 100%;
+}
+
+*/
+
+
+@media screen and (min-width: 1601px) {
+    #sectext1, #sectext2, #sectext3 {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 1385px) {
+    #sectext1, #sectext2, #sectext3 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    #joker {
+        left: 10%;
+        width: 60%;
+    }
+    #sectext1, #sectext2, #sectext3 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    #sectext1, #sectext2, #sectext3 {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    #sectext1, #sectext2, #sectext3 {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    #sectext1, #sectext2, #sectext3 {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #joker {
+        top: -50%;
+        left: 0%;
+        width: 80%;
+    }
+    #sectext1, #sectext2, #sectext3 {
+        font-size: 14px;
+    }
+    #sectext1 {
+        width: 52%;
+        left: 27%;
+        top: 25%;
+    }
+    #sectext2 {
+        width: 50%;
+        top: 35%;
+        left: 17%;
+    }
+    #sectext3 {
+        width: 58%;
+        left: 13%;
+        top: 40%;
+    }
+    #secinfo1, #secinfo2, #secinfo3 {
+        width: 100%;
+        left: 0%;
+    }
+    #secinfo1 {
+        top: 10%;
+        height: 70%;
+    }
+    #secinfo2 {
+        top: 10%;
+        height: 70%;
+    }
+    #secinfo3 {
+        top: 20%;
+        height: 70%;
+    }
+    #secdeco3 {
+        right: 0%;
+        top: 60%;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    #sectext1, #sectext2, #sectext3 {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    #sectext1, #sectext2, #sectext3 {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 435px) {
+    #sectext1, #sectext2, #sectext3 {
+        font-size: 12px;
+        width: 90%;
+        left: 5%;
+    }
+    #sectext2 {
+        top: 30%;
+        transform: rotate(-5deg);
+    }
+    #sectext3 {
+        width: 80%;
+        top: 20%;
+        transform: rotate(5deg);
+    }
+    #secinfo1, #secinfo2, #secinfo3 {
+        display: none;
+    }
+    #secdeco2 {
+        top: 50%;
+    }
+    #secdeco3 {
+        bottom: 0%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #sectext1, #sectext2, #sectext3 {
+        font-size: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

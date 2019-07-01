@@ -1,0 +1,983 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* Celeste Font //////////////////////////////////////////////////////////*/
+
+@font-face {
+    font-family: 'personified_uxregular';
+    src: url('../fonts/personifieduxregular-webfont.woff2') format('woff2'),
+         url('../fonts/personifieduxregular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    font-family: 'personified_uxregular';
+    background-color: #000000;
+}
+
+
+/*////////////////////////////////////////////////////////////////////////*/
+/* Nav Menu //////////////////////////////////////////////////////////////*/
+
+img {
+    margin: 0px;
+    padding: 0px;
+}
+
+#persona-logo {
+    height: 65px;
+    width: 85px;
+}
+
+#persona-menu-icon {
+    height: 60px;
+    width: 110px;
+}
+
+nav {
+    z-index: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('../ressources/Persona/header-bg.png');
+    background-size: 100vw 90px;
+    background-repeat: no-repeat;
+}
+
+
+.logoclic {
+    z-index: 100;
+    margin-left: 10%;
+}
+
+.celesteimg {
+    height: 55px;
+    width: 80px;
+}
+
+.zeldaimg {
+    height: 52px;
+    width: 90px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(29, 28, 28);
+}
+
+.burger {
+    display: none;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 33%;
+    }
+
+    .logoclic {
+        margin-left: 11%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 65vh;
+        top: 100px;
+        background-image: url('../ressources/Persona/nav.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        visibility: hidden;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.1s ease-in;
+    }
+
+    .celesteimg {
+        height: 90px;
+        width: 140px;
+    }
+
+    .zeldaimg {
+        height: 90px;
+        width: 140px;
+    }
+
+    .nav-links li {
+        opacity: 0;
+        height: 20%;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+        margin: 20px;
+    }
+}
+
+
+.nav-active {
+    visibility: visible;
+    transform: translateX(0%);
+}
+
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(150px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* Video Banner //////////////////////////////////////////////////////////*/
+
+.vid-header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #c1bfc2;
+    overflow: hidden;
+}
+
+.vid-container {
+    width: 100%;
+    height: 100%;
+}
+
+.dim-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #851e1e9c;
+    z-index: -490;
+}
+
+.vid-container video {
+    position: absolute;
+    z-index: -500;
+    min-height: 100%;
+    min-width: 100%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+.img-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+
+#persona-banner {
+    width: 470px;
+    height: 530px;
+    margin-bottom: 70px;
+}
+
+#persona-title {
+    position: absolute;
+    top: 350px;
+    width: 250px;
+    height: 150px;
+}
+
+@media screen and (max-width: 768px) {
+    #persona-banner {
+        width: 350px;
+        height: 365px;
+    }
+
+    #persona-title {
+        width: 100px;
+        height: 60px;
+        top: 270px;
+    }
+}
+
+/* Separation ////////////////////////////////////////////////*/
+
+#persona-separation {
+    z-index: -300;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+}
+
+.persona-name {
+    font-size: 18px;
+}
+
+/* Section 1 ////////////////////////////////////////////*/
+
+#section1 {
+    position: relative;
+    z-index: 0;
+    width: 100vw;
+}
+
+#sectionimg1 {
+    width: 100vw;
+    height: 90vh;
+    z-index: -20;
+}
+
+#secinfo1 {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    z-index: 20;
+    max-width: 950px;
+    max-height: 570px;
+}
+
+#sectext1 {
+    display: flex;
+    position: absolute;
+    z-index: 200;
+    font-size: 22px;
+    width: 500px;
+    color: white;
+    top: 35%;
+    left: 26%;
+    transform: rotate(3deg);
+}
+
+#joker {
+    position: absolute;
+    display: flex;
+    left: 50%;
+    top: -25%;
+    width: 550px;
+    height: 700px;
+    z-index: -10;
+}
+
+/*///////////////////////////////////////////////////////*/
+#section2 {
+    position: relative;
+    z-index: 0;
+    width: 100vw;
+}
+
+#sectionimg2 {
+    width: 100vw;
+    height: 95vh;
+    transform: scaleX(-1);
+}
+
+#secinfo2 {
+    position: absolute;
+    top: 13%;
+    left: 20%;
+    z-index: 20;
+    width: 950px;
+    height: 570px;
+}
+
+#sectext2 {
+    display: flex;
+    position: absolute;
+    z-index: 30;
+    font-size: 20px;
+    width: 480px;
+    height: 160px;
+    color: white;
+    top: 45%;
+    left: 31%;
+    transform: rotate(1deg);
+}
+
+#secdeco2 {
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    z-index: 30;
+    height: 500px;
+    width: 800px;
+}
+
+#panther {
+    position: absolute;
+    display: flex;
+    left: 5%;
+    top: -15%;
+    width: 500px;
+    height: 700px;
+    z-index: -10;
+    transform: scaleX(-1)
+}
+
+#noire {
+    position: absolute;
+    display: flex;
+    left: 25%;
+    top: -25%;
+    width: 500px;
+    height: 700px;
+    z-index: -11;
+}
+
+#morgana {
+    position: absolute;
+    display: flex;
+    left: 50%;
+    top: -15%;
+    width: 200px;
+    height: 300px;
+    z-index: -10;
+}
+
+#skull {
+    position: absolute;
+    display: flex;
+    left: 60%;
+    top: -30%;
+    width: 500px;
+    height: 700px;
+    z-index: -10;
+}
+
+/*////////////////////////////////////////////////////////*/
+#section3 {
+    position: relative;
+    z-index: 0;
+    width: 100vw;
+}
+
+#sectionimg3 {
+    width: 100vw;
+    height: 100vh;
+}
+
+#secinfo3 {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    z-index: 20;
+    width: 950px;
+    height: 570px;
+}
+
+#secdeco3 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    z-index: 25;
+    width: 400px;
+    height: 400px;
+}
+
+#sectext3 {
+    display: flex;
+    position: absolute;
+    z-index: 30;
+    font-size: 20px;
+    width: 500px;
+    height: 160px;
+    color: white;
+    top: 40%;
+    left: 20%;
+    transform: rotate(-2deg);
+}
+
+/*  CAROUSEL
+.carousel-container {
+    position: absolute;
+    border: 5px solid red;
+    top: 48%;
+    left: 16.5%;
+    z-index: 50;
+    width: 36%;
+    height: 320px;
+    transform: rotate(-5deg);
+    overflow: hidden;
+}
+
+#prevBtn {
+    position: absolute;
+    top: 50%;
+    z-index: 60;
+    left: 10%;
+    color: rgb(255, 0, 0);
+    font-size: 40px;
+    cursor: pointer;
+}
+
+
+#nextBtn {
+    position: absolute;
+    top: 50%;
+    z-index: 100;
+    right: 10%;
+    color: rgb(255, 0, 0);
+    font-size: 40px;
+    cursor: pointer;
+
+}
+
+.carousel-slide {
+
+    display: flex;
+    width: 100%;
+    height: 320px;
+}
+.carousel-slide img {
+    
+    max-width: 100%;
+    max-height: 100%;
+}
+*/
+#yusuke {
+    position: absolute;
+    display: flex;
+    left: 20%;
+    top: -25%;
+    width: 450px;
+    height: 600px;
+    z-index: -10;
+}
+
+
+#futaba {
+    position: absolute;
+    display: flex;
+    left: 0%;
+    top: -25%;
+    width: 500px;
+    height: 700px;
+    z-index: -10;
+}
+
+#makoto {
+    position: absolute;
+    display: flex;
+    left: 45%;
+    top: -20%;
+    width: 500px;
+    height: 700px;
+    z-index: -10;
+}
+
+#kasumi {
+    position: absolute;
+    display: flex;
+    left: 60%;
+    top: -15%;
+    width: 500px;
+    height: 700px;
+    z-index: -10;
+    transform: scaleX(-1);
+}
+
+/*
+@media screen and (max-width: 320px){
+    #persona-banner {
+        width: 300px;
+        height: 360px;
+    }
+    #joker {
+        width: 280px;
+        height: 500px;
+        left: 0%;
+    }
+    #sectext1, #sectext2, #sectext3 {
+        width: 250px;
+        font-size: 16px;
+        left: 10%;
+        top: 22%;
+    }
+    #skull, #panther, #noire, #morgana, #yusuke, #makoto, #futaba, #kasumi {
+        width: 40%;
+        height: 40%;
+    }
+    #panther {
+        left: 0%;
+    }
+    #noire {
+        top: -20%;
+        left: 18%;
+    }
+    #morgana {
+        left: 40%;
+        width: 100px;
+        height: 150px;
+    }
+    #skull {
+        left: 52%;
+        top: -20%;
+    }
+    #futaba {
+        left: 0%;
+    }
+    #yusuke {
+        left: 10%;
+    }
+    #makoto {
+        left: 35%;
+    }
+    #kasumi {
+        left: 50%;
+    }
+    #secinfo2, #secdeco2, #secinfo3, #secinfo1 {
+        display: none;
+    }
+    #sectext2 {
+        transform: rotate(-10deg);
+    }
+    #secdeco3 {
+        z-index: -15;
+        top: -50%;
+        left: 25%;
+        width: 50%;
+        height: 40%;
+        transform: rotate(10deg);
+    }
+}
+@media screen and (max-width: 360px){
+    #persona-banner {
+        width: 300px;
+        height: 360px;
+    }
+    #joker {
+        width: 280px;
+        height: 500px;
+        left: 0%;
+    }
+    #sectext1, #sectext2, #sectext3 {
+        width: 250px;
+        font-size: 16px;
+        left: 10%;
+        top: 22%;
+    }
+    #skull, #panther, #noire, #morgana, #yusuke, #makoto, #futaba, #kasumi {
+        width: 40%;
+        height: 40%;
+    }
+    #panther {
+        left: 0%;
+    }
+    #noire {
+        top: -20%;
+        left: 18%;
+    }
+    #morgana {
+        left: 40%;
+        width: 100px;
+        height: 150px;
+    }
+    #skull {
+        left: 52%;
+        top: -20%;
+    }
+    #futaba {
+        left: 0%;
+    }
+    #yusuke {
+        left: 10%;
+    }
+    #makoto {
+        left: 35%;
+    }
+    #kasumi {
+        left: 50%;
+    }
+    #secinfo2, #secdeco2, #secinfo3, #secinfo1 {
+        display: none;
+    }
+    #sectext2 {
+        transform: rotate(-10deg);
+    }
+    #secdeco3 {
+        z-index: -15;
+        top: -50%;
+        left: 25%;
+        width: 50%;
+        height: 40%;
+        transform: rotate(10deg);
+    }
+    #sectext3 {
+        font-size: 18px;
+    }
+
+}
+@media screen and (max-width: 375px){
+    #persona-banner {
+        width: 300px;
+        height: 360px;
+    }
+    #joker {
+        width: 280px;
+        height: 500px;
+        left: 0%;
+    }
+    #sectext1, #sectext2, #sectext3 {
+        width: 250px;
+        font-size: 16px;
+        left: 10%;
+        top: 22%;
+    }
+    #skull, #panther, #noire, #morgana, #yusuke, #makoto, #futaba, #kasumi {
+        width: 40%;
+        height: 40%;
+    }
+    #panther {
+        left: 0%;
+    }
+    #noire {
+        top: -20%;
+        left: 18%;
+    }
+    #morgana {
+        left: 40%;
+        width: 100px;
+        height: 150px;
+    }
+    #skull {
+        left: 52%;
+        top: -20%;
+    }
+    #futaba {
+        left: 0%;
+    }
+    #yusuke {
+        left: 10%;
+    }
+    #makoto {
+        left: 35%;
+    }
+    #kasumi {
+        left: 50%;
+    }
+    #secinfo2, #secdeco2, #secinfo3, #secinfo1 {
+        display: none;
+    }
+    #sectext2 {
+        transform: rotate(-10deg);
+    }
+    #secdeco3 {
+        z-index: -15;
+        top: -50%;
+        left: 25%;
+        width: 50%;
+        height: 40%;
+        transform: rotate(10deg);
+    }
+    #sectext3 {
+        font-size: 18px;
+    }
+    #sectext1 {
+        font-size: 17px;
+        left: 15%;
+    }
+    #sectext2 {
+        font-size: 17px;
+        width: 300px;
+        transform: rotate(-15deg);
+    }
+}
+@media screen and (max-width: 414px){
+    #persona-banner {
+        width: 300px;
+        height: 360px;
+    }
+    #joker {
+        width: 350px;
+        height: 500px;
+        left: 0%;
+    }
+    #sectext1, #sectext2, #sectext3 {
+        width: 250px;
+        font-size: 16px;
+        left: 10%;
+        top: 22%;
+    }
+    #skull, #panther, #noire, #morgana, #yusuke, #makoto, #futaba, #kasumi {
+        width: 40%;
+        height: 40%;
+    }
+    #panther {
+        left: 0%;
+    }
+    #noire {
+        top: -20%;
+        left: 18%;
+    }
+    #morgana {
+        left: 40%;
+        width: 100px;
+        height: 150px;
+    }
+    #skull {
+        left: 52%;
+        top: -20%;
+    }
+    #futaba {
+        left: 0%;
+    }
+    #yusuke {
+        left: 10%;
+    }
+    #makoto {
+        left: 35%;
+    }
+    #kasumi {
+        left: 50%;
+    }
+    #secinfo2, #secdeco2, #secinfo3, #secinfo1 {
+        display: none;
+    }
+    #sectext2 {
+        transform: rotate(-10deg);
+    }
+    #secdeco3 {
+        z-index: -15;
+        top: -52%;
+        left: 25%;
+        width: 50%;
+        height: 40%;
+        transform: rotate(10deg);
+    }
+    #sectext3 {
+        font-size: 20px;
+        top: 25%;
+
+    }
+    #sectext1 {
+        font-size: 18px;
+        left: 15%;
+    }
+    #sectext2 {
+        font-size: 18px;
+        width: 300px;
+        transform: rotate(-15deg);
+    }
+}
+@media screen and (max-width: 768px){
+    #joker {
+        left: 5%;
+    }
+
+    #secinfo1 {
+        left: 0%;
+        top: 25%;
+        width: 95%;
+    }
+    #sectext1 {
+        font-size: 18px;
+        width: 390px;
+    }
+    #panther {
+        left: 0%;
+        top: -10%;
+        width: 50%;
+        height: 50%;
+    }
+    #noire {
+        left: 25%;
+        top: -15%;
+        width: 40%;
+        height: 40%;
+    }
+    #morgana {
+        margin-top: 5%;
+        width: 20%;
+        height: 20%;
+    }
+    #skull {
+        left: 45%;
+        z-index: -15;
+    }
+    #secinfo2 {
+        left: 0%;
+        top: 20%;
+    }
+    #secdeco2 {
+        width: 40%;
+        height: 20%;
+        top: 30%;
+        left: 50%;
+    }
+    #sectext2 {
+        left: 16%;
+        top: 37%;
+    }
+    #futaba {
+        width: 300px;
+        height: 450px;
+        top: -15%;
+    }
+    #yusuke {
+        width: 400px;
+        height: 550px;
+        left: 15%;
+    }
+    #makoto {
+        left: 35%;
+    }
+    #kasumi {
+        left: 40%;
+    }
+    #secinfo3 {
+        left: 0%;
+        top: 20%;
+    }
+    #sectext3 {
+        font-size: 22px;
+        left: 12%;
+        top: 33%;
+    }
+    #secdeco3 {
+        width: 30%;
+        left: 60%;
+    }
+}
+@media screen and (max-width: 1024px){
+    #joker {
+        left: 20%;
+    }
+    #secinfo1 {
+        left: 0%;
+        top: 25%;
+    }
+    #panther {
+        left: 0%;
+    }
+    #noire {
+        left: 20%;
+    }
+    #morgana {
+        top: -10%;
+    }
+    #skull {
+        left: 45%;
+        z-index: -15;
+    }
+    #secinfo2 {
+        left: 0%;
+        top: 20%;
+    }
+    #secdeco2 {
+        width: 40%;
+        height: 20%;
+        top: 30%;
+        left: 50%;
+    }
+    #sectext2 {
+        left: 16%;
+        top: 37%;
+    }
+    #futaba {
+        width: 300px;
+        height: 450px;
+        top: -15%;
+    }
+    #yusuke {
+        width: 400px;
+        height: 550px;
+        left: 15%;
+    }
+    #makoto {
+        left: 35%;
+    }
+    #kasumi {
+        left: 40%;
+    }
+    #secinfo3 {
+        left: 0%;
+        top: 20%;
+    }
+    #sectext3 {
+        font-size: 22px;
+        left: 12%;
+        top: 33%;
+    }
+    #secdeco3 {
+        width: 30%;
+        left: 60%;
+    }
+}
+@media screen and (max-width: 1366px){
+
+}
+
+@media screen and (min-height: 850px){
+    #sectext2 {
+        top: 40%;
+    }
+    #sectext1 {
+        top: 30%;
+    }
+    #sectext3 {
+        top: 35%;
+    }
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

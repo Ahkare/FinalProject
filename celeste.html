@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/celeste.css">
+    <title>Celeste</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- Responsive NavBar -->
+        <nav class="menu fixed-top">
+            <a href="celeste.html" class="logoclic"><img src="ressources/Celeste/CelesteLogo_mountain.png"
+                    id="celeste-logo"></a>
+            <ul class="nav-links">
+                <li><a href="persona.html"><img src="ressources/Persona/ThievesLogo.png" class="personaimg" alt=""></a>
+                </li>
+                <li><a href="zelda.html"><img src="ressources/Zelda/zeldaLogo.png" alt="" class="zeldaimg"></a></li>
+            </ul>
+            <div class="burger">
+                <img src="ressources/Celeste/journal.png" alt="journal menu icon" onclick="changeBurger();"
+                    class="burger-icon" id="celeste-menu-icon">
+                <!--<img src="ressources/Celeste/x.png" alt="" class="burger-quit">-->
+            </div>
+        </nav>
+
+        <!-- Banner Video -->
+        <div class="vid-header">
+            <div class="img-container">
+                <img src="ressources/Celeste/CelesteLogo.png" id="celeste-banner" alt="">
+            </div>
+            <div class="vid-container">
+                <div class="dim-video"></div>
+                <video src="ressources/Celeste/celesteloop.mp4" autoplay="true" loop="true" muted="true"></video>
+            </div>
+        </div>
+
+        <div class="separation">
+            <p><span class="celestename">Celeste</span> is a platform game in which players control a girl named
+                Madeline as she makes her way up a mountain while avoiding various deadly obstacles. Along with jumping
+                and climbing up walls for a limited amount of time, Madeline has the ability to perform a mid-air dash
+                in the eight cardinal and intercardinal directions.</p>
+        </div>
+    </header>
+    <main>
+        <div class="textbox">
+            <img src="ressources/Celeste/madeline_distracted08.png" id="textboximg" onclick="changetextbox();"
+                class="madelinetext" alt="text box">
+            <img src="ressources/Celeste/textboxbutton.png" id="textboxbtn" alt="" onclick="changetextbox();">
+            <p id="textboxtext" onclick="changetextbox();">...</p>
+        </div>
+        <section id="section1" class="container">
+            <div id="memosection">
+                <img src="ressources/Celeste/memo.png" id="celestememo" alt="">
+                <div id="memotext">
+                    <h3>To anyone reading this</h3>
+                    <p>A lot of things happened at the Celeste Mountain, some could say it was "paranormal" and it
+                        probably was. I came across a hiker, theo, on my way to the top. He was very friendly, but
+                        that's where things get weird. Inside a cave, i found a mirror that showed a dark side of me,
+                        the side that didn't believe i could get to the top, but after a lot of conflict, we came along
+                        quite well and became good friends ! We managed to get over all the obstacles and get to the top
+                        of Celeste, so to anyone reading this, <span class="dash">be careful</span> you can do it!
+                    </p>
+                </div>
+                <img src="ressources/Celeste/a.png" id="bothimg1" alt="Picture of Madeline and her shadow">
+                <img src="ressources/Celeste/c.png" id="bothimg2" alt="Picture of Madeline and her shadow">
+                <img src="ressources/Celeste/d.png" id="bothimg3" alt="Picture of Madeline and her shadow">
+                <img src="ressources/Celeste/b.png" id="bothimg4" alt="Picture of Madeline and her shadow">
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="JS/index.js"></script>
+</body>
+
+</html>

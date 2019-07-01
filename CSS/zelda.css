@@ -1,0 +1,643 @@
+* {box-sizing: border-box;}
+
+
+/* Celeste Font //////////////////////////////////////////////////////////*/
+
+@font-face {
+    font-family: 'hylia_serif_betaregular';
+    src: url('../fonts/hyliaserifbeta-regular-webfont.woff2') format('woff2'),
+         url('../fonts/hyliaserifbeta-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    font-family: 'hylia_serif_betaregular';
+    background-color: #01c57a;
+    background-image: url('../ressources/Zelda/zeldaBGBrownlong.png');
+    background-size: 100%;
+}
+
+/*////////////////////////////////////////////////////////////////////////*/
+/* Nav Menu //////////////////////////////////////////////////////////////*/
+
+#zelda-logo {
+    height: 70px;
+    width: 105px;
+}
+
+#zelda-menu-icon {
+    height: 60px;
+    width: 60px;
+}
+
+nav {
+    z-index: 500;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #448f35be;
+}
+
+
+.logoclic {
+    z-index: 100;
+}
+
+.personaimg {
+    height: 55px;
+    width: 85px;
+}
+
+.celesteimg {
+    height: 60px;
+    width: 87px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(29, 28, 28);
+}
+
+.burger {
+    display: none;
+}
+
+.burger-quit {
+    display: none;
+}
+
+
+@media screen and (max-width: 1024px){
+    .nav-links {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 55vh;
+        top: 70px;
+        background-color: #448f35be;
+        display: flex;
+        flex-direction: column;
+        visibility: hidden;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in;
+    }
+
+    .personaimg {
+        height: 90px;
+        width: 140px;
+    }
+    
+    .celesteimg {
+        height: 90px;
+        width: 140px;
+    }
+
+    .nav-links li {
+        opacity: 0;
+        height: 20%;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.nav-colorceleste {
+    background-color: #353664;
+}
+
+.nav-active {
+    visibility: visible;
+    transform: translateX(0%);
+}
+
+.nav-purple {
+    background-color: #353664;
+    box-shadow: 0px 0px 10px;
+}
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px); 
+    }
+}
+/* Video Banner //////////////////////////////////////////////////////////*/
+
+.vid-header {
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #c1bfc2;
+    overflow: hidden;
+}
+
+.vid-container {
+    width: 100%;
+    height: 100%;
+}
+
+.dim-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #448f359c;
+    z-index: -490;
+}
+
+.vid-container video {
+    position: absolute;
+    z-index: -500;
+    min-height: 100%;
+    min-width: 100%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+.img-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+
+#zelda-banner {
+    width: 600px;
+    height: 350px;
+}
+
+#bannerlink {
+    position: absolute;
+    z-index: -10;
+    left: 25%;
+    width: 40%;
+    height: 80%;
+}
+
+@media screen and (max-width: 768px) {
+    #zelda-banner {
+        width: 300px;
+        height: 170px;
+    }
+    #bannerlink {
+        width: 150px;
+        height: 260px;
+        top: -30%;
+    }
+}
+
+/* Separation ////////////////////////////////////////////////*/
+
+.separation {
+    position: relative;
+    color: #fff;
+    background-color: #000000;
+    font-size: 16px;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#zeldaseparation {
+    position: absolute;
+    top: 65%;
+    z-index: 50;
+    width: 100vw;
+}
+
+.zeldaname {
+    font-size: 18px;
+}
+
+/* Main content ///////////////////////////*/
+
+main {
+    background-image: url('../ressources/Zelda/zeldaBGBrownlongdeco.png');
+    background-size: 100%;
+}
+
+section {
+    padding-top: 100px;
+    font-family: 'lucida handwriting', 'hylia_serif_betaregular' ;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#retrobox {
+    position: relative;
+    width: 700px;
+    height: 400px;
+}
+
+#retrolink {
+    position: absolute;
+    z-index: 0;
+    width: 350px;
+    height: 350px;
+    left: -40%;
+    top: 5%;
+}
+
+#retroimg {
+    position: relative;
+    z-index: 0;
+    width: 700px;
+    height: 400px;
+    transform: rotate(1.5deg);
+}
+
+#retrotext {
+    position: absolute;
+    top: 12%;
+    left: 10%;
+    width: 560px;
+    height: 300px;
+    transform: rotate(2deg);
+
+}
+
+
+
+#ootbox {
+    position: relative;
+    width: 700px;
+    height: 400px;
+}
+
+#ootlink {
+    position: absolute;
+    z-index: 10;
+    width: 350px;
+    height: 450px;
+    left: 40%;
+    top: -15%;
+}
+
+#ootimg {
+    position: relative;
+    z-index: 15;
+    width: 400px;
+    height: 300px;
+    transform: rotate(85deg);
+}
+
+#oottext {
+    position: absolute;
+    z-index: 30;
+    top: 0%;
+    left: 13%;
+    width: 230px;
+    height: 300px;
+    transform: rotate(-4deg);
+}
+
+
+
+#tpbox {
+    position: relative;
+    width: 700px;
+    height: 300px;
+}
+
+#tplink {
+    position: absolute;
+    z-index: 16;
+    width: 300px;
+    height: 420px;
+    left: 15%;
+    top: -30%;
+}
+
+#tpimg {
+    position: relative;
+    z-index: 5;
+    left: 50%;
+    top: -15%;
+    width: 500px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+#tptext {
+    position: absolute;
+    font-family: 'hylia_serif_betaregular';
+    z-index: 10;
+    top: 5%;
+    left: 55%;
+    width: 400px;
+    height: 270px;
+    color: rgb(15, 182, 248);
+    font-size: 20px;
+}
+
+
+#finalbox {
+    position: relative;
+    width: 700px;
+    height: 600px;
+}
+
+#finalimg {
+    position: relative;
+    width: 700px;
+    height: 200px;
+    top: 65%;
+    z-index: 50;
+}
+
+#ganon {
+    position: absolute;
+    z-index: 10;
+    left: -10%;
+    width: 400px;
+    height: 500px;
+}
+
+#zelda {
+    position: absolute;
+    z-index: 10;
+    top: 3%;
+    left: 15%;
+    width: 400px;
+    height: 450px;
+}
+
+#HWlink {
+    position: absolute;
+    z-index: 11;
+    top: 2%;
+    left: 50%;
+    width: 300px;
+    height: 460px;
+}
+
+#darunia {
+    position: absolute;
+    z-index: 10;
+    top: 12%;
+    left: 65%;
+    width: 300px;
+    height: 400px;
+}
+
+#finaltext {
+    position: absolute;
+    text-align: center;
+    top: 70%;
+    left: 6%;
+    z-index: 60;
+    width: 620px;
+    height: 125px;
+}
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+    #tplink {
+        left: -10%;
+    }
+    #tpimg {
+        left: 23%;
+    }
+    #tptext {
+        left: 28%;
+    }
+    #retrolink {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #retrobox, #ootbox {
+        width: 500px;
+        height: 285px;
+    }
+
+    #retroimg {
+        width: 500px;
+        height: 270px;
+    }
+
+    #retrotext {
+        left: 7%;
+        width: 420px;
+        height: 260px;
+        font-size: 11px;
+    }
+    #ootimg {
+        width: 300px;
+        height: 200px;
+    }
+    #oottext {
+        font-size: 13px;
+        width: 160px;
+        top: -5%;
+        left: 15%;
+    }
+    #ootlink {
+        width: 230px;
+        height: 300px;
+    }
+    #tpbox {
+        width: 500px;
+        height: 290px;
+    }
+    #tpimg{
+        width: 370px;
+        height: 230px;
+    }
+    #tplink {
+        width: 230px;
+        height: 350px;
+        top: -17%;
+        left: -13%;
+    }
+    #tptext {
+        font-size: 16px;
+        width: 320px;
+    }
+    #finalbox {
+        width: 500px;
+    }
+    #finalimg {
+        top: 30%;
+        width: 500px;
+    }
+    #finaltext {
+        top: 35%;
+        width: 470px;
+        left: 3%;
+        font-size: 14px;
+    }
+    #ganon, #zelda, #HWlink, #darunia {
+        width: 40%;
+        height: 40%;
+    }
+    #HWlink {
+        top: -3%;
+        height: 325px;
+    }
+    #darunia {
+        top: 5%;
+    }
+    #ganon {
+        left: 0%;
+    }
+    #zelda {
+        left: 22%;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    #retrobox {
+        width: 300px;
+        height: 505px;
+    }
+
+    #ootbox {
+        width: 300px;
+    }
+
+    #retroimg {
+        width: 300px;
+        height: 420px;
+    }
+
+    #retrotext {
+        left: 9%;
+        top: 10%;
+        width: 250px;
+        height: 260px;
+        font-size: 11px;
+    }
+    #ootimg {
+        width: 300px;
+        height: 200px;
+        left: -12%;
+    }
+    #oottext {
+        font-size: 13px;
+        width: 160px;
+        top: -8%;
+        left: 12%;
+    }
+    #ootlink {
+        width: 50%;
+        top: -60%;
+    }
+    #tpbox {
+        width: 300px;
+        height: 290px;
+    }
+    #tpimg{
+        z-index: 50;
+        width: 300px;
+        height: 230px;
+        top: 15%;
+        left: 0%;
+    }
+    #tplink {
+        width: 230px;
+        height: 350px;
+        top: -25%;
+        left: 0%;
+    }
+    #tptext {
+        z-index: 51;
+        top: 29%;
+        left: 12%;
+        font-size: 16px;
+        width: 250px;
+    }
+    #finalbox {
+        width: 300px;
+    }
+    #finalimg {
+        top: 20%;
+        width: 300px;
+        height: 220px;
+    }
+    #finaltext {
+        top: 22%;
+        width: 270px;
+        left: 4%;
+        font-size: 12px;
+    }
+    #ganon, #zelda, #HWlink, #darunia {
+        width: 40%;
+        height: 30%;
+    }
+    #HWlink {
+        top: 0%;
+        height: 205px;
+    }
+    #darunia {
+        top: 5%;
+    }
+    #ganon {
+        left: 0%;
+    }
+    #zelda {
+        left: 22%;
+    }
+}
+
+
+
+
+
+
+
+
+
+

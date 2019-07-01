@@ -1,0 +1,477 @@
+* {box-sizing: border-box;}
+
+
+/* Celeste Font //////////////////////////////////////////////////////////*/
+
+@font-face {
+    font-family: 'renogareregular';
+    src: url('../fonts/renogare-regular-webfont.woff2') format('woff2'),
+         url('../fonts/renogare-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    font-family: 'renogareregular';
+    background-color: #480078;
+    background-image: url("../ressources/Celeste/finalbg.png");
+}
+
+/*////////////////////////////////////////////////////////////////////////*/
+/* Nav Menu //////////////////////////////////////////////////////////////*/
+
+#celeste-logo {
+    height: 65px;
+    width: 85px;
+}
+
+#celeste-menu-icon {
+    height: 60px;
+    width: 50px;
+}
+
+nav {
+    z-index: 500;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #662fa5a6;
+}
+
+
+.logoclic {
+    z-index: 100;
+}
+
+.personaimg {
+    height: 60px;
+    width: 62px;
+}
+
+.zeldaimg {
+    height: 60px;
+    width: 100px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(29, 28, 28);
+}
+
+.burger {
+    display: none;
+}
+
+.burger-quit {
+    display: none;
+}
+
+
+@media screen and (max-width: 1024px){
+    .nav-links {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 55vh;
+        top: 65px;
+        background-color: #662fa5a6;
+        display: flex;
+        flex-direction: column;
+        visibility: hidden;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in;
+    }
+
+    .personaimg {
+        height: 90px;
+        width: 140px;
+    }
+    
+    .zeldaimg {
+        height: 90px;
+        width: 140px;
+    }
+
+    .nav-links li {
+        opacity: 0;
+        height: 20%;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.nav-colorceleste {
+    background-color: #353664;
+}
+
+.nav-active {
+    visibility: visible;
+    transform: translateX(0%);
+}
+
+.nav-purple {
+    background-color: #353664;
+    box-shadow: 0px 0px 10px;
+}
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px); 
+    }
+}
+/* Video Banner //////////////////////////////////////////////////////////*/
+
+.vid-header {
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #c1bfc2;
+    overflow: hidden;
+}
+
+.vid-container {
+    width: 100%;
+    height: 100%;
+}
+
+.dim-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3536649c;
+    z-index: -490;
+}
+
+.vid-container video {
+    position: absolute;
+    z-index: -500;
+    min-height: 100%;
+    min-width: 100%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+.img-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+
+#celeste-banner {
+    width: 300px;
+    height: 350px;
+}
+
+/* Separation ////////////////////////////////////////////////*/
+
+.separation {
+    position: relative;
+    color: #fff;
+    background-color: #000000;
+    font-size: 16px;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.celestename {
+    font-size: 18px;
+}
+
+/* Section 1 ///////////////////////////////////////////////////*/
+
+
+/* Text box //////////////////////////////////////////////////*/
+.textbox {
+    position: relative;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+#textboxtext {
+    display: inline-block;
+    letter-spacing: 2px;
+    position: absolute;
+    color: #fff;
+    font-size: 26px;
+    top: 20%;
+    width: 685px;
+    height: 125px;
+}
+
+#textboximg {
+    width: 1050px;
+    height: 200px;
+    position: relative;
+}
+
+#textboxbtn {
+    position: absolute;
+    top: 80%;
+    animation: blink 1.5s infinite;
+}
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    #textboximg {
+        width: 700px;
+        height: 133px;
+    }
+
+    #textboxtext {
+        width: 460px;
+        height: 83px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #textboximg {
+        width: 525px;
+        height: 100px;
+    }
+
+    #textboxtext {
+        width: 350px;
+        height: 65px;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 550px){
+    #textboximg {
+        width: 350px;
+        height: 100px;
+    }
+
+    #textboxtext {
+        width: 225px;
+        height: 60px;
+        font-size: 10px;
+    }
+}
+/*/////////////////////////////////////////////////////////*/
+#section1 {
+    margin-top: 40px;
+}
+
+#memosection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: 0;
+}
+
+#memotext {
+    font-family: 'Indie Flower', 'renogare';
+    font-size: 20px;
+    position: absolute;
+    width: 370px;
+    margin-top: 120px;
+    transform: rotate(-0.6deg);
+}
+
+#celestememo {
+    width: 450px;
+    height: 700px;
+}
+
+.dash {
+    text-decoration-line: line-through;
+}
+
+#bothimg1 {
+    position: absolute;
+    z-index: 50;
+    width: 200px;
+    height: 220px;
+    left: 15%;
+    transform: rotate(15deg);
+
+}
+#bothimg2 {
+    position: absolute;
+    z-index: -10;
+    width: 200px;
+    height: 220px;
+    left: 68%;
+    top: 15%;
+    transform: rotate(-5deg);
+}
+#bothimg3 {
+    position: absolute;
+    z-index: 5;
+    width: 200px;
+    height: 220px;
+    left: 67%;
+    top: 42%;
+    transform: rotate(7deg);
+}
+#bothimg4 {
+    position: absolute;
+    z-index: -5;
+    width: 200px;
+    height: 220px;
+    left: 16%;
+    top: 50%;
+    transform: rotate(-17deg);
+}
+
+@media screen and (max-width: 1200px){
+    #bothimg1{
+        left: 9%;
+    }
+    #bothimg2{
+        left: 71.5%;
+    }
+    #bothimg3{
+        left: 71%;
+    }
+    #bothimg4{
+        left: 10%;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    #bothimg1{
+        z-index: -5;
+    }
+    #bothimg3{
+        z-index: -5;
+    }
+}
+@media screen and (max-width: 768px){
+    #bothimg1{
+        z-index: 5;
+        width: 100px;
+        height: 110px;
+        top: 90%;
+        left: 10%;
+    }
+    #bothimg2{
+        z-index: 4;
+        width: 100px;
+        height: 110px;
+        top: 90%;
+        left: 30%;
+    }
+    #bothimg3{
+        z-index: 3;
+        width: 100px;
+        height: 110px;
+        top: 90%;
+        left: 50%;
+    }
+    #bothimg4{
+        z-index: 2;
+        width: 100px;
+        height: 110px;
+        top: 90%;
+        left: 65%;
+    }
+    #textboxtext {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 550px){
+
+    #celestememo {
+        width: 350px;
+    }
+
+    #memotext {
+        width: 320px;
+    }
+}
+
+@media screen and (max-width: 350px){
+    #celestememo {width: 310px;}
+    #memotext {width: 295px; font-size: 18px}
+    #textboximg {
+        width: 300px;
+        height: 80px;
+    }
+    #textboxtext {
+        width: 195px;
+        height: 50px;
+        font-size: 8px;
+    }
+    #textboxbtn {
+        width: 15px;
+        height: 6px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
