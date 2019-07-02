@@ -281,13 +281,21 @@ nav {
     width: 40%;
 }
 
-#secinfo1 {
+.secinfo1 {
     position: absolute;
     z-index: 10;
     top: 25%;
     left: 10%;
     width: 70%;
     height: 50%;
+    transform: translateX(-100%);
+    transition: 0.1s ease-in;
+
+}
+
+.secinfo1-active {
+    transform: translateX(0%);
+
 }
 
 #sectext1 {

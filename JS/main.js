@@ -71,6 +71,7 @@ let boxTracker = 'box1';
 function changetextbox() {
     let text = document.getElementById('textboxtext');
     let image = document.getElementById('textboximg');
+    /* Typewriting effect, in the works
     let textArray = ['This is also a test and i really wanna see what happens now', 'This is a text box, i shall test things in my text test box and see if the testing is in a great text environment']
     let count = 0;
     let index = 0;
@@ -90,20 +91,35 @@ function changetextbox() {
         }
 
         setTimeout(type, 50);
-    }
+    }*/
     if (boxTracker === 'box1') {
         image.src = "../ressources/Celeste/theo_thinking02.png";
         boxTracker = 'box2';
-        //text.innerHTML = 'This is also a test and i really wanna see what happens now'
-        type();
+        text.innerHTML = "Hey, what's wrong madeline ?"
+    } else if (boxTracker === 'box2') {
+        image.src = "../ressources/Celeste/theo_thinking02.png";
+        boxTracker = 'box3';
+        text.innerHTML = 'This is also a test and i really wanna see what happens now'
     } else {
         image.src = "../ressources/Celeste/madeline_distracted08.png";
         boxTracker = 'box1';
-        //text.innerHTML = 'This is a text box, i shall test things in my text test box and see if the testing is in a great text environment'
-        type();
+        text.innerHTML = '...'
     }
 }
 
+
+
+window.addEventListener('scroll', () => {
+
+    let firstSection = document.getElementById('secinfo1');
+    let scrollData = window.scrollY;
+    
+    console.log(scrollData);
+
+    if (scrollData >= 270) {
+        firstSection.classList.toggle('secinfo1-active');
+    }
+});
 
 
 
@@ -160,3 +176,5 @@ carouselSlide.addEventListener('transitionend', () => {
 ///////////////////////
 // Persona animations//
 ///////////////////////
+
+
