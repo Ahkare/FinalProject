@@ -29,10 +29,10 @@ let burgerIcon = 'open'
 function changeBurger() {
     let image = document.getElementById('celeste-menu-icon')
     if (burgerIcon == 'open') {
-        image.src = "../ressources/Celeste/x.png"
+        image.src = "ressources/Celeste/x.png"
         burgerIcon = 'close'
     } else {
-        image.src = "../ressources/Celeste/journal.png"
+        image.src = "ressources/Celeste/journal.png"
         burgerIcon = 'open'
     }
 }
@@ -40,10 +40,10 @@ function changeBurger() {
 function changeBurgerPersona() {
     let image = document.getElementById('persona-menu-icon')
     if (burgerIcon == 'open') {
-        image.src = "../ressources/Persona/exit_btn.png"
+        image.src = "ressources/Persona/exit_btn.png"
         burgerIcon = 'close'
     } else {
-        image.src = "../ressources/Persona/menu_btn.png"
+        image.src = "ressources/Persona/menu_btn.png"
         burgerIcon = 'open'
     }
 }
@@ -51,10 +51,10 @@ function changeBurgerPersona() {
 function changeBurgerZelda() {
     let image = document.getElementById('zelda-menu-icon')
     if (burgerIcon == 'open') {
-        image.src = "../ressources/Zelda/linkspin.gif"
+        image.src = "ressources/Zelda/linkspin.gif"
         burgerIcon = 'close'
     } else {
-        image.src = "../ressources/Zelda/linknospin.png"
+        image.src = "ressources/Zelda/linknospin.png"
         burgerIcon = 'open'
     }
 }
@@ -73,59 +73,59 @@ function changetextbox() {
     let image = document.getElementById('textboximg');
 
     if (boxTracker === 'box1') {
-        image.src = "../ressources/Celeste/theo_thinking02.png";
+        image.src = "ressources/Celeste/theo_thinking02.png";
         boxTracker = 'box2';
         text.innerHTML = "Hey, what's wrong madeline ?";
     } else if (boxTracker === 'box2') {
-        image.src = "../ressources/Celeste/madeline_distracted04.png";
+        image.src = "ressources/Celeste/madeline_distracted04.png";
         boxTracker = 'box3';
         text.innerHTML = "Nothing, i'm just wondering where we are..";
     } else if (boxTracker === 'box3') {
-        image.src = "../ressources/Celeste/theo_excited04.png";
+        image.src = "ressources/Celeste/theo_excited04.png";
         boxTracker = 'box4';
         text.innerHTML = "Don't worry about it, we're on something called a 'website'.";
     } else if (boxTracker === 'box4') {
-        image.src = "../ressources/Celeste/madeline_normal04.png";
+        image.src = "ressources/Celeste/madeline_normal04.png";
         boxTracker = 'box5';
         text.innerHTML = "Oh, i heard about this ! so people can see us right now online ?";
     } else if (boxTracker === 'box5') {
-        image.src = "../ressources/Celeste/theo_yolo03.png";
+        image.src = "ressources/Celeste/theo_yolo03.png";
         boxTracker = 'box6';
         text.innerHTML = "Yeah they can, but we can't see them.";
     } else if (boxTracker === 'box6') {
-        image.src = "../ressources/Celeste/theo_thinking05.png";
+        image.src = "ressources/Celeste/theo_thinking05.png";
         boxTracker = 'box7';
         text.innerHTML = "And sadly, our conversation is completely scripted.";
     } else if (boxTracker === 'box7') {
-        image.src = "../ressources/Celeste/madeline_upset05.png";
+        image.src = "ressources/Celeste/madeline_upset05.png";
         boxTracker = 'box8';
         text.innerHTML = "I see, that's a bummer.";
     } else if (boxTracker === 'box8') {
-        image.src = "../ressources/Celeste/theo_serious04.png";
+        image.src = "ressources/Celeste/theo_serious04.png";
         boxTracker = 'box9';
         text.innerHTML = "Yes, but that's only because the creator made us like this.";
     } else if (boxTracker === 'box9') {
-        image.src = "../ressources/Celeste/theo_excited04.png";
+        image.src = "ressources/Celeste/theo_excited04.png";
         boxTracker = 'box10';
         text.innerHTML = "Maybe one day, we will have way more things to talk about";
     } else if (boxTracker === 'box10') {
-        image.src = "../ressources/Celeste/madeline_distracted04.png";
+        image.src = "ressources/Celeste/madeline_distracted04.png";
         boxTracker = 'box11';
         text.innerHTML = "Yeah but why are we here then ?";
     } else if (boxTracker === 'box11') {
-        image.src = "../ressources/Celeste/theo_thinking05.png";
+        image.src = "ressources/Celeste/theo_thinking05.png";
         boxTracker = 'box12';
         text.innerHTML = "I don't know we just have to deal with it for now";
     } else if (boxTracker === 'box12') {
-        image.src = "../ressources/Celeste/theo_yolo03.png";
+        image.src = "ressources/Celeste/theo_yolo03.png";
         boxTracker = 'box13';
         text.innerHTML = "And you have to deal with me too";
     } else if (boxTracker === 'box13') {
-        image.src = "../ressources/Celeste/madeline_angry00.png";
+        image.src = "ressources/Celeste/madeline_angry00.png";
         boxTracker = 'box14';
         text.innerHTML = "...";
     } else {
-        image.src = "../ressources/Celeste/madeline_distracted08.png";
+        image.src = "ressources/Celeste/madeline_distracted08.png";
         boxTracker = 'box1';
         text.innerHTML = '...';
     }
